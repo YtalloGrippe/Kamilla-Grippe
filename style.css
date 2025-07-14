@@ -31,7 +31,6 @@ body {
 
 header {
     background: var(--verde);
-    color: var(--titulos);
     padding: 12px 0;
     position: fixed;
     top: 0;
@@ -47,7 +46,6 @@ main {
     margin-top: 0;
     box-shadow: 0px 3px 7.5px rgba(2, 2, 2, 0.3);
     padding: 15px;
-    background: #c7af94;
 }
 
 .container {
@@ -111,8 +109,7 @@ nav {
 }
 
 .menu a:hover {
-    color: #b1b1b1;
-    /* tom prateado envelhecido, leve e elegante */
+    color: #b1b1b1; 
 }
 
 .menu-toggle {
@@ -205,33 +202,6 @@ nav {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* Responsividade adicional para tablets e celulares */
-@media (max-width: 768px) {
-    .inicio-texto h1 {
-        font-size: 1.5rem;
-    }
-
-    .inicio-texto h3 {
-        font-size: 1.125rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 7.5px;
-    }
-
-    .inicio-texto h1 {
-        font-size: 1.35rem;
-    }
-
-    .inicio-texto h3 {
-        font-size: 0.975rem;
     }
 }
 
@@ -546,4 +516,52 @@ i {
     color: #fafafa;
     font-size: 2.25rem;
     line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .inicio-texto h1 {
+        font-size: 1.5rem;
+    }
+
+    .inicio-texto h3 {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+  .inicio-texto h1 {
+    font-size: 2rem;
+  }
+
+  .inicio-texto h2 {
+    font-size: 1.2rem;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .inicio-texto p {
+    font-size: 1.1rem;
+    padding: 0 15px;
+  }
+
+  .texto-sobre h1 {
+    font-size: 1.8rem;
+  }
+
+  .texto-sobre p {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
 }
