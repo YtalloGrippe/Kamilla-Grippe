@@ -109,12 +109,44 @@ nav {
 }
 
 .menu a:hover {
-    color: #b1b1b1; 
+    color: #b1b1b1;
 }
 
 .menu-toggle {
     display: none;
-    color: black;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #fafafa;
+    margin-left: auto;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu a {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
 
 .inicio {
@@ -519,49 +551,53 @@ i {
 }
 
 @media (max-width: 768px) {
-    .inicio-texto h1 {
-        font-size: 1.5rem;
-    }
+  .inicio {
+    flex-direction: column;
+    gap: 30px;
+    padding: 100px 20px;
+  }
 
-    .inicio-texto h3 {
-        font-size: 1.125rem;
-    }
-}
-
-@media (max-width: 480px) {
   .inicio-texto h1 {
     font-size: 2rem;
   }
 
   .inicio-texto h2 {
-    font-size: 1.2rem;
-    margin-right: 0;
+    font-size: 1.3rem;
     text-align: center;
+    margin-right: 0;
   }
 
   .inicio-texto p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0 15px;
   }
 
-  .texto-sobre h1 {
-    font-size: 1.8rem;
-  }
-
-  .texto-sobre p {
-    font-size: 1rem;
+  .inicio-imagem img {
+    max-width: 280px;
   }
 }
 
+@media (max-width: 480px) {
+    .inicio-texto h1 {
+        font-size: 2rem;
+    }
 
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
+    .inicio-texto h2 {
+        font-size: 1.2rem;
+        margin-right: 0;
+        text-align: center;
+    }
 
-  .logo {
-    margin-bottom: 10px;
-  }
+    .inicio-texto p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .texto-sobre h1 {
+        font-size: 1.8rem;
+    }
+
+    .texto-sobre p {
+        font-size: 1rem;
+    }
 }
