@@ -112,31 +112,54 @@ nav {
     color: #b1b1b1;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
 .menu-toggle {
     display: none;
     font-size: 1.6rem;
     cursor: pointer;
     color: #fafafa;
     margin-left: auto;
-    padding-right: 10px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #fafafa;
+  margin-left: auto;
+}
+
+.menu {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .menu-toggle {
     display: block;
-    margin: 10px 0;
   }
 
   .menu {
+    display: none;
     flex-direction: column;
     width: 100%;
-    gap: 12px;
-    display: none;
+    margin-top: 10px;
   }
 
   .menu.active {
@@ -144,8 +167,8 @@ nav {
   }
 
   .menu a {
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -551,30 +574,30 @@ i {
 }
 
 @media (max-width: 768px) {
-  .inicio {
-    flex-direction: column;
-    gap: 30px;
-    padding: 100px 20px;
-  }
+    .inicio {
+        flex-direction: column;
+        gap: 30px;
+        padding: 120px 50px;
+    }
 
-  .inicio-texto h1 {
-    font-size: 2rem;
-  }
+    .inicio-texto h1 {
+        font-size: 2rem;
+    }
 
-  .inicio-texto h2 {
-    font-size: 1.3rem;
-    text-align: center;
-    margin-right: 0;
-  }
+    .inicio-texto h2 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-right: 0;
+    }
 
-  .inicio-texto p {
-    font-size: 1rem;
-    padding: 0 15px;
-  }
+    .inicio-texto p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
 
-  .inicio-imagem img {
-    max-width: 280px;
-  }
+    .inicio-imagem img {
+        max-width: 280px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -599,5 +622,34 @@ i {
 
     .texto-sobre p {
         font-size: 1rem;
+
     }
+}
+
+@keyframes deslizarMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu.active {
+  display: flex;
+  animation: deslizarMenu 0.4s ease-out forwards;
+}
+
+.menu a {
+  opacity: 0;
+  animation: aparecerLink 0.3s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes aparecerLink {
+  to {
+    opacity: 1;
+  }
 }
