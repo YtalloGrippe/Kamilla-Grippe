@@ -181,8 +181,7 @@ nav {
     color: #ffffff;
     font-family: "Space Grotesk", sans-serif;
     font-weight: 100;
-    text-align: right;
-    margin-right: 230px;
+    text-align: center;
 
 }
 
@@ -191,7 +190,8 @@ nav {
     color: #ffffff;
     font-family: "Space Grotesk", sans-serif;
     font-weight: 100;
-    margin-right: 230px;
+    text-align: center;
+    margin-top: 30px;
 
 }
 
@@ -682,21 +682,23 @@ i {
         margin-top: -80px;
         font-size: 1.5rem;
         width: 400px;
-        margin-left: 265px;
+        margin-left: 10px;
+        text-align: center;
     }
 
     .inicio-texto h2 {
         margin-top: 30px;
-        font-size: 0.9rem;
-        width: 600px;
-        margin-left: 100px;
+        font-size: 1rem;
+        width: 300px;
+        margin-left: 60px;
+        text-align: center;
 
     }
 
     .inicio-texto h3 {
-        margin-top: 20px;
+        margin-top: 30px;
         font-size: 1rem;
-        margin-left: 250px;
+        margin-left: 10px;
 
     }
 
